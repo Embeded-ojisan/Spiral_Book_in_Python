@@ -21,6 +21,7 @@ def insertionSort(A, N):
             j-=1
         A[j + 1] = v
         trace(A, N)
+        i+=1
 
 ############ main ############
 
