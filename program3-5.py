@@ -1,4 +1,6 @@
 
+import sys
+
 class Card:
     def __init(suit, value):
         self.suit = suit
@@ -14,3 +16,6 @@ X = input().split()
 
 for x in X:
     A[i] = int
+    i += 1
+
+sys.stdout.write("\n")
