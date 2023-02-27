@@ -6,16 +6,27 @@ class Card:
         self.suit = suit
         self.value = value
 
+def bubble(C1, N):
+
+def selection(C1, N):
+
 ############ main ############
 N = int(input())
 i = 0
 x = 0
-members=[Card(0,0)]*N
+C1=C2=[Card(0,0)]*N
 
 X = input().split()
 
 for x in X:
-    members[i].value = members[i].suit = int(x)
+    C2[i].value = C2[i].suit = C1[i].value = C1[i].suit = int(x)
     i += 1
+
+bubble(C1, N)
+selection(C2, N)
+
+print(N)
+for c1 in C1:
+    sys.stdout.write(c1.suit, c1.value)
 
 sys.stdout.write("\n")
