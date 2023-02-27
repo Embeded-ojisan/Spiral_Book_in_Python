@@ -2,20 +2,20 @@
 import sys
 
 class Card:
-    def __init(suit, value):
+    def __init__(self, suit, value):
         self.suit = suit
         self.value = value
 
 ############ main ############
 N = int(input())
-A = [0] * 100
 i = 0
 x = 0
+members=[Card(0,0)]*N
 
 X = input().split()
 
 for x in X:
-    A[i] = int
+    members[i].value = members[i].suit = int(x)
     i += 1
 
 sys.stdout.write("\n")
