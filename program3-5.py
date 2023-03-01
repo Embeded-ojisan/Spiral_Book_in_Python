@@ -10,7 +10,7 @@ def bubble(A, N):
     for i in range(0, N):
         for j in range(N-1, i+1):
             if A[j].value < A[j - 1].value:
-                A[j], A[j-1] = A[j-1], A[j]
+                A[j], A[j-1] = A[j-1], A[j] 
 
 def selection(A, N):
     for i in range(0, N):
