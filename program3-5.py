@@ -36,8 +36,11 @@ X = input().split()
 
 for x in X:
     x2 = list(x)
+    print(x2)
     C2[i].suit = C1[i].suit = x2[0]
     C2[i].value = C1[i].value = int(x2[1])
+    sys.stdout.write(str(C1[i].value))
+    sys.stdout.write(C1[i].suit)
     i += 1
 
 bubble(C1, N)
@@ -49,4 +52,18 @@ for c1 in C1:
     sys.stdout.write(str(c1.value))
     sys.stdout.write(" ")
 
+sys.stdout.write("\n")
+sys.stdout.write("Stable")
+sys.stdout.write("\n")
+
+for c2 in C2:
+    sys.stdout.write(c2.suit)
+    sys.stdout.write(str(c2.value))
+    sys.stdout.write(" ")
+
+sys.stdout.write("\n")
+if isStable(C1, C2, N):
+    sys.stdout.write("Stable")
+else:
+    sys.stdout.write("Not Stable")
 sys.stdout.write("\n")
