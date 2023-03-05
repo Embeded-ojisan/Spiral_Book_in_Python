@@ -8,9 +8,12 @@ class Card:
 
 def bubble(A, N):
     for i in range(0, N):
-        for j in range(N-1, i+1):
+        print(i)
+        print(A[i].value)
+        for j in range(N-1, i-1, -1):
             if A[j].value < A[j - 1].value:
-                A[j], A[j-1] = A[j-1], A[j] 
+                A[j].value, A[j-1].value = A[j-1].value, A[j].value 
+                A[j].suit, A[j-1].suit = A[j-1].suit, A[j].suit 
 
 def selection(A, N):
     for i in range(0, N):
@@ -18,13 +21,14 @@ def selection(A, N):
         for j in range(i, N):
             if A[j].value < A[minj].value:
                 minj = j
-        A[i], A[minj] = A[minj], A[i]
+        A[i].value, A[minj].value = A[minj].value, A[i].value
+        A[i].suit, A[minj].suit = A[minj].suit, A[i].suit
 
 def isStable(C1, C2, N):
     for i in range(0, N):
         if C1[i].suit != C2[i].suit:
-            return false
-    return true
+            return False
+    return True
 
 ############ main ############
 N = int(input())
