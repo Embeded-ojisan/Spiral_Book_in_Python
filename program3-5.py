@@ -7,11 +7,11 @@ class Card:
         self.value = value
 
 def bubble(A, N):
-    num_of_bubble=0
     for i in range(0, N):
         print("number is :"+str(i))
         print("value is :"+str(A[i].value))
-        for j in range(N-1, i-1, -1):
+        print("suit is :"+str(A[i].suit))
+        for j in range(N-1, i, -1):
             if A[j].value < A[j - 1].value:
                 A[j].value, A[j-1].value = A[j-1].value, A[j].value 
                 A[j].suit, A[j-1].suit = A[j-1].suit, A[j].suit 
@@ -35,14 +35,20 @@ def isStable(C1, C2, N):
 N = int(input())
 i = 0
 x = 0
-C1=C2=[Card(0,0)]*N
+C1=C2=[Card("A",0)]*N
 
 X = input().split()
 
 for x in X:
     x2 = list(x)
+    print("value is :"+str(x2[0]))
+    print("suit is :"+str(x2[1]))
     C2[i].suit = C1[i].suit = x2[0]
     C2[i].value = C1[i].value = int(x2[1])
+    print("value is :"+str(C1[i].suit))
+    print("suit is :"+str(C1[i].value))
+    print("value is :"+str(C2[i].suit))
+    print("suit is :"+str(C2[i].value))
     i += 1
 
 bubble(C1, N)
