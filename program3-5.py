@@ -7,9 +7,10 @@ class Card:
         self.value = value
 
 def bubble(A, N):
+    num_of_bubble=0
     for i in range(0, N):
-        print(i)
-        print(A[i].value)
+        print("number is :"+str(i))
+        print("value is :"+str(A[i].value))
         for j in range(N-1, i-1, -1):
             if A[j].value < A[j - 1].value:
                 A[j].value, A[j-1].value = A[j-1].value, A[j].value 
@@ -40,11 +41,8 @@ X = input().split()
 
 for x in X:
     x2 = list(x)
-    print(x2)
     C2[i].suit = C1[i].suit = x2[0]
     C2[i].value = C1[i].value = int(x2[1])
-    sys.stdout.write(str(C1[i].value))
-    sys.stdout.write(C1[i].suit)
     i += 1
 
 bubble(C1, N)
