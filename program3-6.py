@@ -4,6 +4,7 @@ cnt=0
 G=[0]
 
 def insertionSort(A, n, g):
+    global cnt
     for i in range(g, n):
         v = A[i]
         j = i - g
@@ -21,20 +22,20 @@ def shellSort(A, n):
         G.append(h)
         h = 3*h + 1
 
-    for i in reversed(range(0, G.size())):
+    for i in reversed(range(0, len(G))):
         insertionSort(A, n, G[i])
 
 ############ main ############
 n = int(input())
 i = 0
 x = 0
-A=[0]*N
+A=[0]*n
 
 X = input().split()
 
 for x in X:
     x2 = list(x)
-    A[i] = x2[0]
+    A[i] = int(x2[0])
     i += 1
 
 shellSort(A, n)
