@@ -31,12 +31,21 @@ i = 0
 x = 0
 A=[0]*n
 
-X = input().split()
-
-for x in X:
-    x2 = list(x)
-    A[i] = int(x2[0])
-    i += 1
+for i in range(0, n):
+    A[i] = int(input()) 
 
 shellSort(A, n)
+
+sys.stdout.write(str(len(G))+"\n")
+
+for i in reversed(range(0, len(G)-1)):
+    sys.stdout.write(str(G[i]))
+    if i > 0:
+        sys.stdout.write(" ")
+sys.stdout.write("\n")
+sys.stdout.write(str(cnt)+"\n")
+
+for i in range(0, n):
+    sys.stdout.write(str(A[i])+"\n")
+
 
