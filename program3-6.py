@@ -8,10 +8,10 @@ def insertionSort(A, n, g):
     for i in range(g, n):
         v = A[i]
         j = i - g
-    while j >= 0 and A[j] > v:
-        A[j + g] = A[j]
-        j -= g
-        cnt += 1
+        while j >= 0 and A[j] > v:
+            A[j + g] = A[j]
+            j -= g
+            cnt += 1
     A[j+g]=v
 
 def shellSort(A, n):
@@ -36,7 +36,7 @@ for i in range(0, n):
 
 shellSort(A, n)
 
-sys.stdout.write(str(len(G))+"\n")
+sys.stdout.write(str(len(G))+"\n"+"\n")
 
 for i in reversed(range(0, len(G)-1)):
     sys.stdout.write(str(G[i]))
